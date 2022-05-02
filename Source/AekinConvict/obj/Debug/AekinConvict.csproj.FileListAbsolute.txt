@@ -1,0 +1,11 @@
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\Mono.Data.Sqlite.dll
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\Newtonsoft.Json.dll
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\OTAPI.dll
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\TerrariaServer.exe
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\obj\Debug\AekinConvict.csproj.CoreCompileInputs.cache
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\obj\Debug\AekinConvict.csproj.CopyComplete
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\obj\Debug\AekinConvict.csproj.AssemblyReference.cache
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\AekinAPI.dll
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\bin\Debug\AekinAPI.pdb
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\obj\Debug\AekinAPI.dll
+C:\Users\bat627\source\repos\AekinConvict\AekinConvict\obj\Debug\AekinAPI.pdb
