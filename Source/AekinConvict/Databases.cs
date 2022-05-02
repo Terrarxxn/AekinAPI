@@ -191,7 +191,11 @@ namespace AekinConvict.Databases
                     return JsonConvert.DeserializeObject<Character>(data);
                 }
             }
-            return default(Character);
+            Character createdData = new Character(new NetItem[260], 100, 20);
+            for (int i = 0; i < AekinConfig.Instance.SSCDefaultItems.Length; i++)
+                createdData.InventoryData[i] = AekinConfig.Instance.SSCDefaultItems[i];
+            DbConnection.WriteDB(string.Format("INSERT INTO Characters (Account, Data) VALUES ('{0}', '{1}')", name, JsonConvert.SerializeObject(createdData, Formatting.Indented)));
+            return createdData;
         }
     }
     public sealed class RegionsSection : DatabaseSection

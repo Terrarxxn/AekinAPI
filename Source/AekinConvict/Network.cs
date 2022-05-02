@@ -405,8 +405,11 @@ namespace AekinConvict.Network
             if (PlayerSlot.Invoke(new PlayerSlotPacketArgs(e, slot, stack, prefix, id)))
                 return;
 
+            e.Handled = AekinConfig.Instance.SSCEnable;
+
             if (plr != null && AekinConfig.Instance.SSCEnable)
             {
+                plr.aekinInventory[slot] = new NetItem(id, stack, prefix);
                 if (plr.loggedIn)
                 {
                     NetItem item = new NetItem(id, stack, prefix);
@@ -426,9 +429,7 @@ namespace AekinConvict.Network
                 }
 
             }
-            plr.aekinInventory[slot] = new NetItem(id, stack, prefix);
 
-            e.Handled = AekinConfig.Instance.SSCEnable;
         }
 
         public static PacketHandlers<TilePaintPacketArgs> TilePaint = new PacketHandlers<TilePaintPacketArgs>();
