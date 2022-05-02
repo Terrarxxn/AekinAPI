@@ -135,20 +135,18 @@ namespace AekinConvict.Core
             int id = e.Who;
 
             NetServer.Players[id] = new NetPlayer(Main.player[id], Netplay.Clients[id].ClientUUID, Netplay.Clients[id].Socket.GetRemoteAddress().ToString().Split(':')[0]);
-            NetPlayer plr = NetServer.Players[id];
-
+        }
+        private void HandleGreet(GreetPlayerEventArgs e)
+        {
+            NetPlayer plr = NetServer.Players[e.Who];
             Account account = AekinDatabase.Instance.Accounts.GetAccount(plr.Player.name);
 
             if (account != null && plr.data["PLAYER/DATA"].Get<string>("NET_UUID") == account.clientUUID)
             {
                 plr.Login(account);
             }
-
             plr.CheckBan();
-        }
-        private void HandleGreet(GreetPlayerEventArgs e)
-        {
-            PlayerJoinHandler(NetServer.Players[e.Who]);
+            PlayerJoinHandler(plr);
 
             e.Handled = true;
         }
